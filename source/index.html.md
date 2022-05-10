@@ -64,7 +64,7 @@ This example API documentation page was created with [Slate](https://github.com/
 ## Get All Users
 
 ### OUTPUT:
-```json
+<code>
 [
   {
     "user_id": 1,
@@ -91,7 +91,7 @@ This example API documentation page was created with [Slate](https://github.com/
   }
   
 ]
-```
+</code>
 This endpoint retrieves all users.
 
 ### HTTP Request
