@@ -28,6 +28,34 @@ We have language bindings in JavaScript! You can view code examples in the dark 
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
+# Login / Register
+
+## Login
+###INPUT:
+```json
+{
+  "user_email": "fredrik@holtet.com",
+  "user_password": "iLoveCats123"
+}
+```
+### HTTP request
+`POST /api/groups/posts`
+
+
+##Register:
+```json
+{
+  "user_first_name": "Fredrik",
+  "user_last_name": "Holte",
+  "user_email": "fredrik@holtet.com",
+  "user_phone_number": 48726423,
+  "user_school": "Høyskolen Kristiania",
+  "user_program": "  Dance"
+}
+```
+
+
+
 # Users
 
 ## Get All Users
@@ -36,27 +64,27 @@ This example API documentation page was created with [Slate](https://github.com/
 ```json
 [
   {
-    "id": 1,
-    "firstName": "Syvert",
-    "lastName": "Eidjord",
-    "phoneNumber": "94886155",
-    "email": "syvert@eidjord.com",
-    "school": 1,
-    "program": 2,
-    "profileImage": "https://flickr.com/sfavzxdsrgsfar4123f",
-    "dateCreated": "24.03.1996"
+    "user_id": 1,
+    "user_first_name": "Syvert",
+    "user_last_name": "Eidjord",
+    "user_phone_number": "94886155",
+    "user_email": "syvert@eidjord.com",
+    "user_school": 1,
+    "user_program": 2,
+    "user_profile_image": "https://flickr.com/sfavzxdsrgsfar4123f",
+    "user_date_created": "24.03.1996"
     
   },
   {
-    "id": 2,
-    "firstName": "Marco",
-    "lastName": "Gravbrot",
-    "phoneNumber": "93145678",
-    "email": "marco@gravbrot.com",
-    "school": 2,
-    "program": 3,
-    "profileImage": "https://flickr.com/sfavzxdsaf123f",
-    "dateCreated": "24.03.2000"
+    "user_id": 2,
+    "user_first_name": "Marco",
+    "user_last_name": "Gravbrot",
+    "user_phone_number": "93145678",
+    "user_email": "marco@gravbrot.com",
+    "user_school": 2,
+    "user_program": 3,
+    "user_profile_image": "https://flickr.com/sfavzxdsaf123f",
+    "user_date_created": "24.03.2000"
   }
   
 ]
@@ -71,15 +99,15 @@ This endpoint retrieves all users.
 ### OUTPUT:
 ```json
 {
-  "id": 2,
-  "firstName": "Marco",
-  "lastName": "Gravbrot",
-  "phoneNumber": "93145678",
-  "email": "marco@gravbrot.com",
-  "school": 2,
-  "program": 3,
-  "profileImage": "https://flickr.com/sfavzxdsaf123f",
-  "dateCreated": "24.03.2000"
+  "user_id": 2,
+  "user_first_name": "Marco",
+  "user_last_name": "Gravbrot",
+  "user_phone_number": "93145678",
+  "user_email": "marco@gravbrot.com",
+  "user_school": 2,
+  "user_program": 3,
+  "user_profile_image": "https://flickr.com/sfavzxdsaf123f",
+  "user_date_created": "24.03.2000"
 }
 ```
 
@@ -99,7 +127,7 @@ ID | The ID of the user to retrieve
 
 ```json
 {
-  "id": 2,
+  "user_id": 2,
   "deleted" : ":("
 }
 ```
@@ -121,15 +149,15 @@ ID | The ID of the user to delete
 ### OUTPUT:
 ```json
 {
-  "id": 2,
-  "firstName": "Marco",
-  "lastName": "Newname",
-  "phoneNumber": "123456789",
-  "email": "marco@newname.com",
-  "school": 1,
-  "program": 2,
-  "profileImage": "https://flickr.com/sfa2zxdsaf123f",
-  "dateCreated": "24.03.2000"
+  "user_id": 2,
+  "user_first_name": "Marco",
+  "user_last_name": "Newname",
+  "user_phone_number": "93145678",
+  "user_email": "marco@gravbrot.com",
+  "user_school": 2,
+  "user_program": 3,
+  "user_profile_image": "https://flickr.com/sfavzxdsaf123f",
+  "user_date_created": "24.03.2000"
 }
 ```
 This endpoint updates a specific user
@@ -138,15 +166,15 @@ This endpoint updates a specific user
 ### INPUT
 ```json
 {
-  "id": 2,
-  "firstName": "Marco",
-  "lastName": "Newname",
-  "phoneNumber": "123456789",
-  "email": "marco@newname.com",
-  "school": 1,
-  "program": 2,
-  "profileImage": "https://flickr.com/sfa2zxdsaf123f",
-  "dateCreated": "24.03.2000"
+  "user_id": 2,
+  "user_first_name": "Marco",
+  "user_last_name": "Newname",
+  "user_phone_number": "93145678",
+  "user_email": "marco@gravbrot.com",
+  "user_school": 2,
+  "user_program": 3,
+  "user_profile_image": "https://flickr.com/sfavzxdsaf123f",
+  "user_date_created": "24.03.2000"
 }
 ```
 
@@ -177,7 +205,7 @@ ID | The ID of the user to delete
     "group_image": "https://flickr.com/sfavzxdsrgsfar4123f",
     "group_school": "Høyskolen Kristiania",
     "group_admin": 1,
-    "dateCreated": "24.03.1996"
+    "date_created": "24.03.1996"
   },
   {
     "group_id": 2,
@@ -186,7 +214,7 @@ ID | The ID of the user to delete
     "group_image": "https://flickr.com/sfavzxdsrgsfar4123f",
     "group_school": "Høyskolen Kristiania",
     "group_admin": 3,
-    "dateCreated": "24.03.1996"
+    "date_created": "24.03.1996"
   }
   
 ]
@@ -202,7 +230,7 @@ ID | The ID of the user to delete
   "group_image": "https://flickr.com/sfavzxdsrgsfar4123f",
   "group_school": "Høyskolen Kristiania",
   "group_admin": 1,
-  "dateCreated": "24.03.1996"
+  "date_created": "24.03.1996"
 }
 ```
 
@@ -223,7 +251,7 @@ ID | The ID of the user to delete
 `POST /api/groups/<request>`
 
 ## Admin delete user from group
-
+### INPUT:
 ```json
 {
   "group_id": 1,
@@ -239,17 +267,32 @@ ID | The ID of the user to delete
 ```json
 [
 {
-  "firstname": "Fredrik",
-  "lastname": "Holtet",
-  "profileImage": "https://flickr.com/sfavzxdsrgsfar4123f"
+  "user_first_name": "Fredrik",
+  "user_last_name": "Holtet",
+  "user_profile_image": "https://flickr.com/sfavzxdsrgsfar4123f"
 },
   {
-    "firstname": "Jonas",
-    "lastname": "Hansen",
-    "profileImage": "https://flickr.com/sfavzxdsrgsfar4123f"
+    "user_first_name": "Jonas",
+    "user_last_name": "Hansen",
+    "user_profile_image": "https://flickr.com/sfavzxdsrgsfar4123f"
   }
 ]
 ```
 
 ### HTTP request
 `GET /api/groups`
+
+## Post a post in group
+###INPUT:
+```json
+{
+  "group_id": 1,
+  "title": "I need help",
+  "description": "Can someone help me with this problem"
+}
+```
+
+### HTTP request
+`POST /api/groups/posts`
+
+
