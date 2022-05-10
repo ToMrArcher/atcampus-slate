@@ -31,7 +31,7 @@ This example API documentation page was created with [Slate](https://github.com/
 # Login / Register
 
 ## Login
-###INPUT:
+### INPUT:
 ```json
 {
   "user_email": "fredrik@holtet.com",
@@ -42,7 +42,7 @@ This example API documentation page was created with [Slate](https://github.com/
 `POST /api/groups/posts`
 
 
-##Register:
+### Register:
 ```json
 {
   "user_first_name": "Fredrik",
