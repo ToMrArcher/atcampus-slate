@@ -69,6 +69,7 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ### OUTPUT:
 200 OK
+
 ```json
 [
   {
@@ -106,6 +107,7 @@ This endpoint retrieves all users.
 ## Get a Specific User
 ### OUTPUT:
 204 OK
+
 ```json
 {
   "user_id": 2,
@@ -154,6 +156,7 @@ ID | The ID of the user to delete
 ## Update a user
 ### OUTPUT:
 204 OK
+
 ```json
 {
   "user_id": 2,
@@ -200,6 +203,7 @@ ID | The ID of the user to delete
 ## Get all groups
 ### OUTPUT:
 200 OK
+
 ```json
 [
   {
@@ -230,6 +234,7 @@ ID | The ID of the user to delete
 ## Get a specific group
 ### OUTPUT:
 200 OK
+
 ```json
 {
   "group_id": 1,
@@ -280,6 +285,7 @@ ID | The ID of the user to delete
 ## Get all members in a group
 ### OUTPUT:
 200 OK
+
 ```json
 [
 {
@@ -318,6 +324,7 @@ ID | The ID of the user to delete
 ## Get all posts in a  group
 ### OUTPUT:
 200 OK
+
 ```json
 [
 {
@@ -367,6 +374,7 @@ ID | The ID of the user to delete
 ## Get all comments
 ### OUTPUT:
 200 OK
+
 ```json
 [
 {
@@ -391,6 +399,7 @@ ID | The ID of the user to delete
 ## Get all your groups
 ### OUTPUT:
 200 OK
+
 ```json
 [
 {
