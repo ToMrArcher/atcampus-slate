@@ -42,7 +42,8 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ### HTTP request
 `POST /api/login`
-
+###OUTPUT:
+200 OK
 
 ## Register:
 ### INPUT:
@@ -59,13 +60,15 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ### HTTP request
 `POST /api/register`
-
+###OUTPUT:
+201 OK
 
 # Users
 
 ## Get All Users
 
 ### OUTPUT:
+200 OK
 ```json
 [
   {
@@ -102,6 +105,7 @@ This endpoint retrieves all users.
 
 ## Get a Specific User
 ### OUTPUT:
+204 OK
 ```json
 {
   "user_id": 2,
@@ -149,6 +153,7 @@ ID | The ID of the user to delete
 
 ## Update a user
 ### OUTPUT:
+204 OK
 ```json
 {
   "user_id": 2,
@@ -180,7 +185,7 @@ This endpoint updates a specific user
 </code>
 
 ### HTTP Request
-`PUT /api/user/`
+`PUT /api/user`
 
 ### URL Params
 
@@ -194,6 +199,7 @@ ID | The ID of the user to delete
 
 ## Get all groups
 ### OUTPUT:
+200 OK
 ```json
 [
   {
@@ -223,6 +229,7 @@ ID | The ID of the user to delete
 
 ## Get a specific group
 ### OUTPUT:
+200 OK
 ```json
 {
   "group_id": 1,
@@ -239,6 +246,9 @@ ID | The ID of the user to delete
 
 
 ## Request to join group
+### OUTPUT:
+201 OK
+
 ### INPUT:
 <code>
 {<br>
@@ -252,6 +262,9 @@ ID | The ID of the user to delete
 
 
 ## Admin delete user from group
+### OUTPUT:
+204 OK
+
 ### INPUT:
 <code>
 {<br>
@@ -266,6 +279,7 @@ ID | The ID of the user to delete
 
 ## Get all members in a group
 ### OUTPUT:
+200 OK
 ```json
 [
 {
@@ -285,6 +299,9 @@ ID | The ID of the user to delete
 
 
 ## Post a post in group
+### OUTPUT:
+201 OK
+
 ### INPUT:
 <code>
 {<br>
@@ -300,6 +317,7 @@ ID | The ID of the user to delete
 
 ## Get all posts in a  group
 ### OUTPUT:
+200 OK
 ```json
 [
 {
@@ -331,6 +349,9 @@ ID | The ID of the user to delete
 `GET /api/groups/<ID>/posts`
 
 ## Post a comment on a post
+### OUTPUT:
+201 OK
+
 ### INPUT:
 <code>
 {<br>
@@ -345,6 +366,7 @@ ID | The ID of the user to delete
 
 ## Get all comments
 ### OUTPUT:
+200 OK
 ```json
 [
 {
@@ -368,6 +390,7 @@ ID | The ID of the user to delete
 
 ## Get all your groups
 ### OUTPUT:
+200 OK
 ```json
 [
 {
