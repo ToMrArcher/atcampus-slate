@@ -42,7 +42,7 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ### HTTP request
 `POST /api/login`
-###OUTPUT:
+### STATUS CODE:
 200 OK
 
 ## Register:
@@ -60,15 +60,17 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ### HTTP request
 `POST /api/register`
-###OUTPUT:
+### STATUS CODE:
 201 OK
 
 # Users
 
 ## Get All Users
 
-### OUTPUT:
+### STATUS CODE:
 200 OK
+
+### OUTPUT: 
 
 ```json
 [
@@ -105,8 +107,10 @@ This endpoint retrieves all users.
 
 
 ## Get a Specific User
-### OUTPUT:
+### STATUS CODE:
 204 OK
+
+### OUTPUT:
 
 ```json
 {
@@ -154,8 +158,10 @@ ID | The ID of the user to delete
 
 
 ## Update a user
-### OUTPUT:
+### STATUS CODE:
 204 OK
+
+### OUTPUT: 
 
 ```json
 {
@@ -201,8 +207,10 @@ ID | The ID of the user to delete
 
 
 ## Get all groups
-### OUTPUT:
+### STATUS CODE:
 200 OK
+
+### OUTPUT:
 
 ```json
 [
@@ -232,8 +240,10 @@ ID | The ID of the user to delete
 
 
 ## Get a specific group
-### OUTPUT:
+### STATUS CODE:
 200 OK
+
+### OUTPUT:
 
 ```json
 {
@@ -251,7 +261,7 @@ ID | The ID of the user to delete
 
 
 ## Request to join group
-### OUTPUT:
+### STATUS CODE:
 201 OK
 
 ### INPUT:
@@ -267,7 +277,7 @@ ID | The ID of the user to delete
 
 
 ## Admin delete user from group
-### OUTPUT:
+### STATUS CODE:
 204 OK
 
 ### INPUT:
@@ -283,8 +293,10 @@ ID | The ID of the user to delete
 
 
 ## Get all members in a group
-### OUTPUT:
+### STATUS CODE:
 200 OK
+
+### OUTPUT:
 
 ```json
 [
@@ -305,7 +317,7 @@ ID | The ID of the user to delete
 
 
 ## Post a post in group
-### OUTPUT:
+### STATUS CODE:
 201 OK
 
 ### INPUT:
@@ -322,8 +334,10 @@ ID | The ID of the user to delete
 
 
 ## Get all posts in a  group
-### OUTPUT:
+### STATUS CODE:
 200 OK
+
+### OUTPUT:
 
 ```json
 [
@@ -356,7 +370,7 @@ ID | The ID of the user to delete
 `GET /api/groups/<ID>/posts`
 
 ## Post a comment on a post
-### OUTPUT:
+### STATUS CODE:
 201 OK
 
 ### INPUT:
@@ -372,8 +386,10 @@ ID | The ID of the user to delete
 `POST /api/groups/posts/<ID>/comment`
 
 ## Get all comments
-### OUTPUT:
+### STATUS CODE:
 200 OK
+
+### OUTPUT:
 
 ```json
 [
@@ -397,8 +413,10 @@ ID | The ID of the user to delete
 `GET /api/groups/posts/<ID>/comments/all`
 
 ## Get all your groups
-### OUTPUT:
+### STATUS CODE:
 200 OK
+
+### OUTPUT:
 
 ```json
 [
