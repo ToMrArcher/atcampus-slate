@@ -34,27 +34,29 @@ This example API documentation page was created with [Slate](https://github.com/
 ## Login
 ### INPUT:
 <code>
-{
-  "user_email": "fredrik@holtet.com",
-  "user_password": "iLoveCats123"
+{<br>
+  "user_email": "fredrik@holtet.com",<br>
+  "user_password": "iLoveCats123"<br>
 }
 </code>
+
 ### HTTP request
 `POST /api/login`
 
 
 ## Register:
 ### INPUT:
-```json
-{
-  "user_first_name": "Fredrik",
-  "user_last_name": "Holte",
-  "user_email": "fredrik@holtet.com",
-  "user_phone_number": 48726423,
-  "user_school": "Høyskolen Kristiania",
-  "user_program": "  Dance"
+<code>
+{<br>
+  "user_first_name": "Fredrik",<br>
+  "user_last_name": "Holte",<br>
+  "user_email": "fredrik@holtet.com",<br>
+  "user_phone_number": 48726423,<br>
+  "user_school": "Høyskolen Kristiania",<br>
+  "user_program": "  Dance"<br>
 }
-```
+</code>
+
 ### HTTP request
 `POST /api/register`
 
@@ -116,7 +118,6 @@ This endpoint retrieves all users.
 This endpoint retrieves a specific user.
 
 ### HTTP Request
-
 `GET /api/user/<ID>`
 
 ### URL Parameters
@@ -137,7 +138,6 @@ ID | The ID of the user to retrieve
 This endpoint deletes a specific user.
 
 ### HTTP Request
-
 `DELETE api/user/<ID>`
 
 ### URL Parameters
@@ -165,21 +165,21 @@ ID | The ID of the user to delete
 This endpoint updates a specific user
 
 ### INPUT
-```json
-{
-  "user_id": 2,
-  "user_first_name": "Marco",
-  "user_last_name": "Newname",
-  "user_phone_number": "93145678",
-  "user_email": "marco@gravbrot.com",
-  "user_school": 2,
-  "user_program": 3,
-  "user_profile_image": "https://flickr.com/sfavzxdsaf123f",
-  "user_date_created": "24.03.2000"
+<code>
+{<br>
+  "user_id": 2,<br>
+  "user_first_name": "Marco",<br>
+  "user_last_name": "Newname",<br>
+  "user_phone_number": "93145678",<br>
+  "user_email": "marco@gravbrot.com",<br>
+  "user_school": 2,<br>
+  "user_program": 3,<br>
+  "user_profile_image": "https://flickr.com/sfavzxdsaf123f",<br>
+  "user_date_created": "24.03.2000"<br>
 }
-```
-### HTTP Request
+</code>
 
+### HTTP Request
 `PUT /api/user/`
 
 ### URL Params
@@ -218,7 +218,6 @@ ID | The ID of the user to delete
 ]
 ```
 ### HTTP Request
-
 `GET /api/groups/all`
 
 
@@ -236,30 +235,31 @@ ID | The ID of the user to delete
 }
 ```
 ### HTTP request
-
 `GET /api/groups/<ID>`
 
 
 ## Request to join group
 ### INPUT:
-```json
-{
-  "group_id": 1,
-  "group_description": "Awesome group"
+<code>
+{<br>
+  "group_id": 1,<br>
+  "group_description": "Awesome group"<br>
 }
-```
+</code>
+
 ### HTTP request
 `POST /api/groups/<request>`
 
 
 ## Admin delete user from group
 ### INPUT:
-```json
-{
-  "group_id": 1,
-  "user_id": 2
+<code>
+{<br>
+  "group_id": 1,<br>
+  "user_id": 2<br>
 }
-```
+</code>
+
 ### HTTP request
 `DELETE /api/groups/remove`
 
@@ -286,13 +286,14 @@ ID | The ID of the user to delete
 
 ## Post a post in group
 ### INPUT:
-```json
-{
-  "post_title": "I need help",
-  "post_body": "This is the body of the post",
-  "user_id": 1
+<code>
+{<br>
+  "post_title": "I need help",<br>
+  "post_body": "This is the body of the post",<br>
+  "user_id": 1<br>
 }
-```
+</code>
+
 ### HTTP request
 `POST /api/groups/<ID>/posts`
 
@@ -331,13 +332,14 @@ ID | The ID of the user to delete
 
 ## Post a comment on a post
 ### INPUT:
-```json
-{
-  "comment_body": "I can help",
-  "post_body": "This is the body of the post",
-  "comment_user_id": 1
+<code>
+{<br>
+  "comment_body": "I can help",<br>
+  "post_body": "This is the body of the post",<br>
+  "comment_user_id": 1<br>
 }
-```
+</code>
+
 ### HTTP request
 `POST /api/groups/posts/<ID>/comment`
 
