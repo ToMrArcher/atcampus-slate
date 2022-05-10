@@ -39,7 +39,7 @@ This example API documentation page was created with [Slate](https://github.com/
 }
 ```
 ### HTTP request
-`POST /api/groups/posts`
+`POST /api/login`
 
 
 ## Register:
@@ -54,8 +54,8 @@ This example API documentation page was created with [Slate](https://github.com/
   "user_program": "  Dance"
 }
 ```
-
-
+### HTTP request
+`POST /api/register`
 
 # Users
 
@@ -163,7 +163,6 @@ ID | The ID of the user to delete
 ```
 This endpoint updates a specific user
 
-### Body
 ### INPUT
 ```json
 {
