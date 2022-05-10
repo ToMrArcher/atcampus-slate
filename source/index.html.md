@@ -293,7 +293,7 @@ ID | The ID of the user to delete
 
 
 ## Post a post in group
-###INPUT:
+### INPUT:
 ```json
 {
   "group_id": 1,
