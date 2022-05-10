@@ -86,7 +86,7 @@ This endpoint retrieves a specific user.
 
 ### HTTP Request
 
-`GET /api/user?<ID>`
+`GET /api/user/<ID>`
 
 ### URL Parameters
 
@@ -135,7 +135,7 @@ This endpoint updates a specific user
 
 ### HTTP Request
 
-`POST /api/user?<ID>`
+`POST /api/user/<ID>`
 
 ### URL Params
 
@@ -158,7 +158,17 @@ ID | The ID of the user to delete
   "dateCreated": "24.03.2000" <br>
 }
 </code>
+
 # Groups
 
 ## Get all groups
+### HTTP Request
+
+`GET /api/groups/all`
+
+## Get a specific group
+
+### HTTP request
+
+`GET /api/groups/<ID>>`
 
