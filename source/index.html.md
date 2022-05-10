@@ -92,7 +92,6 @@ This example API documentation page was created with [Slate](https://github.com/
   
 ]
 ```
-
 This endpoint retrieves all users.
 
 ### HTTP Request
@@ -114,7 +113,6 @@ This endpoint retrieves all users.
   "user_date_created": "24.03.2000"
 }
 ```
-
 This endpoint retrieves a specific user.
 
 ### HTTP Request
@@ -136,7 +134,6 @@ ID | The ID of the user to retrieve
   "deleted" : ":("
 }
 ```
-
 This endpoint deletes a specific user.
 
 ### HTTP Request
@@ -181,7 +178,6 @@ This endpoint updates a specific user
   "user_date_created": "24.03.2000"
 }
 ```
-
 ### HTTP Request
 
 `PUT /api/user/`
@@ -239,7 +235,6 @@ ID | The ID of the user to delete
   "date_created": "24.03.1996"
 }
 ```
-
 ### HTTP request
 
 `GET /api/groups/<ID>`
@@ -253,7 +248,6 @@ ID | The ID of the user to delete
   "group_description": "Awesome group"
 }
 ```
-
 ### HTTP request
 `POST /api/groups/<request>`
 
@@ -266,7 +260,6 @@ ID | The ID of the user to delete
   "user_id": 2
 }
 ```
-
 ### HTTP request
 `DELETE /api/groups/remove`
 
@@ -287,7 +280,6 @@ ID | The ID of the user to delete
   }
 ]
 ```
-
 ### HTTP request
 `GET /api/groups`
 
@@ -296,13 +288,102 @@ ID | The ID of the user to delete
 ### INPUT:
 ```json
 {
-  "group_id": 1,
-  "title": "I need help",
-  "description": "Can someone help me with this problem"
+  "post_title": "I need help",
+  "post_body": "This is the body of the post",
+  "user_id": 1
 }
 ```
-
 ### HTTP request
-`POST /api/groups/posts`
+`POST /api/groups/<ID>/posts`
 
+
+## Get all posts in a  group
+### OUTPUT:
+```json
+[
+{
+  "posts_id": 1,
+  "post_title": "I need help",
+  "post_body": "Can someone help me with this problem",
+  "post_date_created" : "24.03.1996",
+  "user_id": 1,
+  "group_id": 2
+},
+  {
+    "posts_id": 2,
+    "post_title": "I need help again",
+    "post_body": "Can someone help me with this problem again",
+    "post_date_created" : "24.03.1996",
+    "user_id": 1,
+    "group_id": 2
+  },
+  {
+    "posts_id": 1,
+    "post_title": "I need help pls help",
+    "post_body": "Can someone help me with this problem IU NEED HELP",
+    "user_id": 1,
+    "group_id": 2
+  }
+]
+```
+### HTTP request
+`GET /api/groups/<ID>/posts`
+
+## Post a comment on a post
+### INPUT:
+```json
+{
+  "comment_body": "I can help",
+  "post_body": "This is the body of the post",
+  "comment_user_id": 1
+}
+```
+### HTTP request
+`POST /api/groups/posts/<ID>/comment`
+
+## Get all comments
+### OUTPUT:
+```json
+[
+{
+  "comment_id": 1,
+  "comment_body": "I can help",
+  "comment_date": "24.03.1996",
+  "comment_post_id": 1,
+  "comment_user_id": 1
+},
+  {
+    "comment_id": 2,
+    "comment_body": "I can also help",
+    "comment_date": "24.10.1996",
+    "comment_post_id": 1,
+    "comment_user_id": 2
+  }
+]
+```
+### HTTP request
+`GET /api/groups/posts/<ID>/comments/all`
+
+## Get all your groups
+### OUTPUT:
+```json
+[
+{
+  "user_group_id": 1,
+  "user_id": 2,
+  "group_id": 4,
+  "is_Favorite": true,
+  "date_joined": "24.10.2021"
+},
+  {
+    "user_group_id": 1,
+    "user_id": 2,
+    "group_id": 4,
+    "is_Favorite": true,
+    "date_joined": "24.10.2021"
+  }
+]
+```
+### HTTP request
+`GET /api/user/<ID>/groups/all`
 
