@@ -341,6 +341,15 @@
                   <li>
                     <a href="#get-a-specific-group" class="toc-h2 toc-link" data-title="Get a specific group">Get a specific group</a>
                   </li>
+                  <li>
+                    <a href="#request-to-join-group" class="toc-h2 toc-link" data-title="Request to join group">Request to join group</a>
+                  </li>
+                  <li>
+                    <a href="#admin-delete-user-from-group" class="toc-h2 toc-link" data-title="Admin delete user from group">Admin delete user from group</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-members-in-a-group" class="toc-h2 toc-link" data-title="Get all members in a group">Get all members in a group</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -361,7 +370,7 @@
 <p>We have language bindings in JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2><h3 id='output'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="nl">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Syvert"</span><span class="p">,</span><span class="w">
@@ -509,7 +518,26 @@
   </span><span class="nl">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='http-request-6'>HTTP request</h3>
-<p><code>GET /api/groups/&lt;ID&gt;&gt;</code></p>
+<p><code>GET /api/groups/&lt;ID&gt;</code></p>
+<h2 id='request-to-join-group'>Request to join group</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome group"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-7'>HTTP request</h3>
+<p><code>POST /api/groups/&lt;request&gt;</code></p>
+<h2 id='admin-delete-user-from-group'>Admin delete user from group</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-8'>HTTP request</h3>
+<p><code>DELETE /api/groups</code></p>
+<h2 id='get-all-members-in-a-group'>Get all members in a group</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fredrik"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Holtet"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"profileImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsrgsfar4123f"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-9'>HTTP request</h3>
+<p><code>GET /api/groups</code></p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
