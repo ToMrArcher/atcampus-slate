@@ -423,54 +423,52 @@
 <h3 id='output-2'>OUTPUT:</h3>
 <p>201 OK</p>
 <h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2><h3 id='output-3'>OUTPUT:</h3>
-<p>200 OK
-```json
-[
-  {
-    &quot;user_id&quot;: 1,
-    &quot;user_first_name&quot;: &quot;Syvert&quot;,
-    &quot;user_last_name&quot;: &quot;Eidjord&quot;,
-    &quot;user_phone_number&quot;: &quot;94886155&quot;,
-    &quot;user_email&quot;: &quot;syvert@eidjord.com&quot;,
-    &quot;user_school&quot;: 1,
-    &quot;user_program&quot;: 2,
-    &quot;user_profile_image&quot;: &quot;https://flickr.com/sfavzxdsrgsfar4123f&quot;,
-    &quot;user_date_created&quot;: &quot;24.03.1996&quot;</p>
+<p>200 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Syvert"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eidjord"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94886155"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"syvert@eidjord.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_school"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_program"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_profile_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsrgsfar4123f"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="w">
 
-<p>},
-  {
-    &quot;user_id&quot;: 2,
-    &quot;user_first_name&quot;: &quot;Marco&quot;,
-    &quot;user_last_name&quot;: &quot;Gravbrot&quot;,
-    &quot;user_phone_number&quot;: &quot;93145678&quot;,
-    &quot;user_email&quot;: &quot;marco@gravbrot.com&quot;,
-    &quot;user_school&quot;: 2,
-    &quot;user_program&quot;: 3,
-    &quot;user_profile_image&quot;: &quot;https://flickr.com/sfavzxdsaf123f&quot;,
-    &quot;user_date_created&quot;: &quot;24.03.2000&quot;
-  }</p>
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marco"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gravbrot"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"93145678"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"marco@gravbrot.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_school"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_program"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_profile_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsaf123f"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.2000"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 
-<p>]
-```
-This endpoint retrieves all users.</p>
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all users.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET /api/user</code></p>
 <h2 id='get-a-specific-user'>Get a Specific User</h2><h3 id='output-4'>OUTPUT:</h3>
-<p>204 OK
-<code>json
-{
-  &quot;user_id&quot;: 2,
-  &quot;user_first_name&quot;: &quot;Marco&quot;,
-  &quot;user_last_name&quot;: &quot;Gravbrot&quot;,
-  &quot;user_phone_number&quot;: &quot;93145678&quot;,
-  &quot;user_email&quot;: &quot;marco@gravbrot.com&quot;,
-  &quot;user_school&quot;: 2,
-  &quot;user_program&quot;: 3,
-  &quot;user_profile_image&quot;: &quot;https://flickr.com/sfavzxdsaf123f&quot;,
-  &quot;user_date_created&quot;: &quot;24.03.2000&quot;
-}
-</code>
-This endpoint retrieves a specific user.</p>
+<p>204 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marco"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gravbrot"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"93145678"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"marco@gravbrot.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_school"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_program"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_profile_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsaf123f"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.2000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific user.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET /api/user/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
@@ -506,21 +504,20 @@ This endpoint retrieves a specific user.</p>
 </tr>
 </tbody></table>
 <h2 id='update-a-user'>Update a user</h2><h3 id='output-5'>OUTPUT:</h3>
-<p>204 OK
-<code>json
-{
-  &quot;user_id&quot;: 2,
-  &quot;user_first_name&quot;: &quot;Marco&quot;,
-  &quot;user_last_name&quot;: &quot;Newname&quot;,
-  &quot;user_phone_number&quot;: &quot;93145678&quot;,
-  &quot;user_email&quot;: &quot;marco@gravbrot.com&quot;,
-  &quot;user_school&quot;: 2,
-  &quot;user_program&quot;: 3,
-  &quot;user_profile_image&quot;: &quot;https://flickr.com/sfavzxdsaf123f&quot;,
-  &quot;user_date_created&quot;: &quot;24.03.2000&quot;
-}
-</code>
-This endpoint updates a specific user</p>
+<p>204 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marco"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Newname"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"93145678"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"marco@gravbrot.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_school"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_program"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_profile_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsaf123f"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.2000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint updates a specific user</p>
 <h3 id='input-3'>INPUT</h3>
 <p><code>
 {<br>
@@ -550,46 +547,42 @@ This endpoint updates a specific user</p>
 </tr>
 </tbody></table>
 <h1 id='groups'>Groups</h1><h2 id='get-all-groups'>Get all groups</h2><h3 id='output-6'>OUTPUT:</h3>
-<p>200 OK
-```json
-[
-  {
-    &quot;group_id&quot;: 1,
-    &quot;group_name&quot;: &quot;Group 1&quot;,
-    &quot;group_description&quot;: &quot;Awesome group&quot;,
-    &quot;group_image&quot;: &quot;https://flickr.com/sfavzxdsrgsfar4123f&quot;,
-    &quot;group_school&quot;: &quot;Høyskolen Kristiania&quot;,
-    &quot;group_admin&quot;: 1,
-    &quot;date_created&quot;: &quot;24.03.1996&quot;
-  },
-  {
-    &quot;group_id&quot;: 2,
-    &quot;group_name&quot;: &quot;Group 2&quot;,
-    &quot;group_description&quot;: &quot;Studygroup for programming&quot;,
-    &quot;group_image&quot;: &quot;https://flickr.com/sfavzxdsrgsfar4123f&quot;,
-    &quot;group_school&quot;: &quot;Høyskolen Kristiania&quot;,
-    &quot;group_admin&quot;: 3,
-    &quot;date_created&quot;: &quot;24.03.1996&quot;
-  }</p>
+<p>200 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group 1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome group"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsrgsfar4123f"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_school"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Høyskolen Kristiania"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_admin"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group 2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Studygroup for programming"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsrgsfar4123f"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_school"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Høyskolen Kristiania"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_admin"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 
-<p>]
-```</p>
-<h3 id='http-request-7'>HTTP Request</h3>
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-7'>HTTP Request</h3>
 <p><code>GET /api/groups/all</code></p>
 <h2 id='get-a-specific-group'>Get a specific group</h2><h3 id='output-7'>OUTPUT:</h3>
-<p>200 OK
-<code>json
-{
-  &quot;group_id&quot;: 1,
-  &quot;group_name&quot;: &quot;Group 1&quot;,
-  &quot;group_description&quot;: &quot;Awesome group&quot;,
-  &quot;group_image&quot;: &quot;https://flickr.com/sfavzxdsrgsfar4123f&quot;,
-  &quot;group_school&quot;: &quot;Høyskolen Kristiania&quot;,
-  &quot;group_admin&quot;: 1,
-  &quot;date_created&quot;: &quot;24.03.1996&quot;
-}
-</code></p>
-<h3 id='http-request-8'>HTTP request</h3>
+<p>200 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group 1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome group"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsrgsfar4123f"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_school"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Høyskolen Kristiania"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_admin"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date_created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-8'>HTTP request</h3>
 <p><code>GET /api/groups/&lt;ID&gt;</code></p>
 <h2 id='request-to-join-group'>Request to join group</h2><h3 id='output-8'>OUTPUT:</h3>
 <p>201 OK</p>
@@ -614,22 +607,20 @@ This endpoint updates a specific user</p>
 <h3 id='http-request-10'>HTTP request</h3>
 <p><code>DELETE /api/groups/remove</code></p>
 <h2 id='get-all-members-in-a-group'>Get all members in a group</h2><h3 id='output-10'>OUTPUT:</h3>
-<p>200 OK
-<code>json
-[
-{
-  &quot;user_first_name&quot;: &quot;Fredrik&quot;,
-  &quot;user_last_name&quot;: &quot;Holtet&quot;,
-  &quot;user_profile_image&quot;: &quot;https://flickr.com/sfavzxdsrgsfar4123f&quot;
-},
-  {
-    &quot;user_first_name&quot;: &quot;Jonas&quot;,
-    &quot;user_last_name&quot;: &quot;Hansen&quot;,
-    &quot;user_profile_image&quot;: &quot;https://flickr.com/sfavzxdsrgsfar4123f&quot;
-  }
-]
-</code></p>
-<h3 id='http-request-11'>HTTP request</h3>
+<p>200 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fredrik"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Holtet"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_profile_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsrgsfar4123f"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jonas"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hansen"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_profile_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://flickr.com/sfavzxdsrgsfar4123f"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-11'>HTTP request</h3>
 <p><code>GET /api/groups</code></p>
 <h2 id='post-a-post-in-group'>Post a post in group</h2><h3 id='output-11'>OUTPUT:</h3>
 <p>201 OK</p>
@@ -644,35 +635,33 @@ This endpoint updates a specific user</p>
 <h3 id='http-request-12'>HTTP request</h3>
 <p><code>POST /api/groups/&lt;ID&gt;/posts</code></p>
 <h2 id='get-all-posts-in-a-group'>Get all posts in a  group</h2><h3 id='output-12'>OUTPUT:</h3>
-<p>200 OK
-<code>json
-[
-{
-  &quot;posts_id&quot;: 1,
-  &quot;post_title&quot;: &quot;I need help&quot;,
-  &quot;post_body&quot;: &quot;Can someone help me with this problem&quot;,
-  &quot;post_date_created&quot; : &quot;24.03.1996&quot;,
-  &quot;user_id&quot;: 1,
-  &quot;group_id&quot;: 2
-},
-  {
-    &quot;posts_id&quot;: 2,
-    &quot;post_title&quot;: &quot;I need help again&quot;,
-    &quot;post_body&quot;: &quot;Can someone help me with this problem again&quot;,
-    &quot;post_date_created&quot; : &quot;24.03.1996&quot;,
-    &quot;user_id&quot;: 1,
-    &quot;group_id&quot;: 2
-  },
-  {
-    &quot;posts_id&quot;: 1,
-    &quot;post_title&quot;: &quot;I need help pls help&quot;,
-    &quot;post_body&quot;: &quot;Can someone help me with this problem IU NEED HELP&quot;,
-    &quot;user_id&quot;: 1,
-    &quot;group_id&quot;: 2
-  }
-]
-</code></p>
-<h3 id='http-request-13'>HTTP request</h3>
+<p>200 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"posts_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can someone help me with this problem"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_date_created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"posts_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help again"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can someone help me with this problem again"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_date_created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"posts_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help pls help"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can someone help me with this problem IU NEED HELP"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-13'>HTTP request</h3>
 <p><code>GET /api/groups/&lt;ID&gt;/posts</code></p>
 <h2 id='post-a-comment-on-a-post'>Post a comment on a post</h2><h3 id='output-13'>OUTPUT:</h3>
 <p>201 OK</p>
@@ -687,48 +676,44 @@ This endpoint updates a specific user</p>
 <h3 id='http-request-14'>HTTP request</h3>
 <p><code>POST /api/groups/posts/&lt;ID&gt;/comment</code></p>
 <h2 id='get-all-comments'>Get all comments</h2><h3 id='output-14'>OUTPUT:</h3>
-<p>200 OK
-<code>json
-[
-{
-  &quot;comment_id&quot;: 1,
-  &quot;comment_body&quot;: &quot;I can help&quot;,
-  &quot;comment_date&quot;: &quot;24.03.1996&quot;,
-  &quot;comment_post_id&quot;: 1,
-  &quot;comment_user_id&quot;: 1
-},
-  {
-    &quot;comment_id&quot;: 2,
-    &quot;comment_body&quot;: &quot;I can also help&quot;,
-    &quot;comment_date&quot;: &quot;24.10.1996&quot;,
-    &quot;comment_post_id&quot;: 1,
-    &quot;comment_user_id&quot;: 2
-  }
-]
-</code></p>
-<h3 id='http-request-15'>HTTP request</h3>
+<p>200 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I can help"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_post_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I can also help"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.10.1996"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_post_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-15'>HTTP request</h3>
 <p><code>GET /api/groups/posts/&lt;ID&gt;/comments/all</code></p>
 <h2 id='get-all-your-groups'>Get all your groups</h2><h3 id='output-15'>OUTPUT:</h3>
-<p>200 OK
-<code>json
-[
-{
-  &quot;user_group_id&quot;: 1,
-  &quot;user_id&quot;: 2,
-  &quot;group_id&quot;: 4,
-  &quot;is_Favorite&quot;: true,
-  &quot;date_joined&quot;: &quot;24.10.2021&quot;
-},
-  {
-    &quot;user_group_id&quot;: 1,
-    &quot;user_id&quot;: 2,
-    &quot;group_id&quot;: 4,
-    &quot;is_Favorite&quot;: true,
-    &quot;date_joined&quot;: &quot;24.10.2021&quot;
-  }
-]
-</code></p>
-<h3 id='http-request-16'>HTTP request</h3>
+<p>200 OK</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"user_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"is_Favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.10.2021"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_Favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.10.2021"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-16'>HTTP request</h3>
 <p><code>GET /api/user/&lt;ID&gt;/groups/all</code></p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
