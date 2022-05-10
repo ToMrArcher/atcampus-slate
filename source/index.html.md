@@ -28,6 +28,7 @@ We have language bindings in JavaScript! You can view code examples in the dark 
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
+
 # Login / Register
 
 ## Login
@@ -56,6 +57,7 @@ This example API documentation page was created with [Slate](https://github.com/
 ```
 ### HTTP request
 `POST /api/register`
+
 
 # Users
 
@@ -96,6 +98,7 @@ This endpoint retrieves all users.
 ### HTTP Request
 `GET /api/user`
 
+
 ## Get a Specific User
 ### OUTPUT:
 ```json
@@ -123,6 +126,7 @@ This endpoint retrieves a specific user.
 Parameter | Description
 --------- | -----------
 ID | The ID of the user to retrieve
+
 
 ## Delete a Specific Kitten
 
@@ -191,10 +195,8 @@ ID | The ID of the user to delete
 
 # Groups
 
-## Get all groups
-### HTTP Request
 
-`GET /api/groups/all`
+## Get all groups
 ### OUTPUT:
 ```json
 [
@@ -219,6 +221,10 @@ ID | The ID of the user to delete
   
 ]
 ```
+### HTTP Request
+
+`GET /api/groups/all`
+
 
 ## Get a specific group
 ### OUTPUT:
@@ -238,6 +244,7 @@ ID | The ID of the user to delete
 
 `GET /api/groups/<ID>`
 
+
 ## Request to join group
 ### INPUT:
 ```json
@@ -250,6 +257,7 @@ ID | The ID of the user to delete
 ### HTTP request
 `POST /api/groups/<request>`
 
+
 ## Admin delete user from group
 ### INPUT:
 ```json
@@ -261,6 +269,7 @@ ID | The ID of the user to delete
 
 ### HTTP request
 `DELETE /api/groups/remove`
+
 
 ## Get all members in a group
 ### OUTPUT:
@@ -281,6 +290,7 @@ ID | The ID of the user to delete
 
 ### HTTP request
 `GET /api/groups`
+
 
 ## Post a post in group
 ###INPUT:
