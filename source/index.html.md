@@ -68,7 +68,7 @@ This endpoint retrieves all users.
 `GET /api/user`
 
 ## Get a Specific User
-
+### OUTPUT:
 ```json
 {
   "id": 2,
@@ -118,7 +118,7 @@ ID | The ID of the user to delete
 
 
 ## Update a user
-
+### OUTPUT:
 ```json
 {
   "id": 2,
@@ -134,18 +134,8 @@ ID | The ID of the user to delete
 ```
 This endpoint updates a specific user
 
-### HTTP Request
-
-`PUT /api/user/`
-
-### URL Params
-
-Parameter | Description
---------- | -----------
-ID | The ID of the user to delete
-
 ### Body
-
+### INPUT
 ```json
 {
   "id": 2,
@@ -160,13 +150,24 @@ ID | The ID of the user to delete
 }
 ```
 
+### HTTP Request
+
+`PUT /api/user/`
+
+### URL Params
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the user to delete
+
+
 # Groups
 
 ## Get all groups
 ### HTTP Request
 
 `GET /api/groups/all`
-
+### OUTPUT:
 ```json
 [
   {
@@ -192,7 +193,7 @@ ID | The ID of the user to delete
 ```
 
 ## Get a specific group
-
+### OUTPUT:
 ```json
 {
   "group_id": 1,
@@ -210,7 +211,7 @@ ID | The ID of the user to delete
 `GET /api/groups/<ID>`
 
 ## Request to join group
-
+### INPUT:
 ```json
 {
   "group_id": 1,
@@ -231,16 +232,23 @@ ID | The ID of the user to delete
 ```
 
 ### HTTP request
-`DELETE /api/groups`
+`DELETE /api/groups/remove`
 
 ## Get all members in a group
-
+### OUTPUT:
 ```json
+[
 {
   "firstname": "Fredrik",
   "lastname": "Holtet",
   "profileImage": "https://flickr.com/sfavzxdsrgsfar4123f"
-}
+},
+  {
+    "firstname": "Jonas",
+    "lastname": "Hansen",
+    "profileImage": "https://flickr.com/sfavzxdsrgsfar4123f"
+  }
+]
 ```
 
 ### HTTP request
