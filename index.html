@@ -391,7 +391,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the API for AtCampus. Here you can access all of the information about users, groups, posts, comments, schools, and programs. </p>
+<p>Welcome to the API for AtCampus. Here you can access all of the information about users, groups, posts, comments, schools, and programs.   </p>
 
 <p>We have language bindings in JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
@@ -405,7 +405,7 @@
 </code></p>
 <h3 id='http-request'>HTTP request</h3>
 <p><code>POST /api/login</code></p>
-<h3 id='output'>OUTPUT:</h3>
+<h3 id='status-code'>STATUS CODE:</h3>
 <p>200 OK</p>
 <h2 id='register'>Register:</h2><h3 id='input-2'>INPUT:</h3>
 <p><code>
@@ -420,11 +420,11 @@
 </code></p>
 <h3 id='http-request-2'>HTTP request</h3>
 <p><code>POST /api/register</code></p>
-<h3 id='output-2'>OUTPUT:</h3>
+<h3 id='status-code-2'>STATUS CODE:</h3>
 <p>201 OK</p>
-<h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2><h3 id='output-3'>OUTPUT:</h3>
+<h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2><h3 id='status-code-3'>STATUS CODE:</h3>
 <p>200 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h3 id='output'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Syvert"</span><span class="p">,</span><span class="w">
@@ -454,9 +454,9 @@
 <p>This endpoint retrieves all users.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET /api/user</code></p>
-<h2 id='get-a-specific-user'>Get a Specific User</h2><h3 id='output-4'>OUTPUT:</h3>
+<h2 id='get-a-specific-user'>Get a Specific User</h2><h3 id='status-code-4'>STATUS CODE:</h3>
 <p>204 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h3 id='output-2'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marco"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gravbrot"</span><span class="p">,</span><span class="w">
@@ -503,9 +503,9 @@
 <td>The ID of the user to delete</td>
 </tr>
 </tbody></table>
-<h2 id='update-a-user'>Update a user</h2><h3 id='output-5'>OUTPUT:</h3>
+<h2 id='update-a-user'>Update a user</h2><h3 id='status-code-5'>STATUS CODE:</h3>
 <p>204 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h3 id='output-3'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marco"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Newname"</span><span class="p">,</span><span class="w">
@@ -546,9 +546,9 @@
 <td>The ID of the user to delete</td>
 </tr>
 </tbody></table>
-<h1 id='groups'>Groups</h1><h2 id='get-all-groups'>Get all groups</h2><h3 id='output-6'>OUTPUT:</h3>
+<h1 id='groups'>Groups</h1><h2 id='get-all-groups'>Get all groups</h2><h3 id='status-code-6'>STATUS CODE:</h3>
 <p>200 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h3 id='output-4'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="nl">"group_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group 1"</span><span class="p">,</span><span class="w">
@@ -571,9 +571,9 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div><h3 id='http-request-7'>HTTP Request</h3>
 <p><code>GET /api/groups/all</code></p>
-<h2 id='get-a-specific-group'>Get a specific group</h2><h3 id='output-7'>OUTPUT:</h3>
+<h2 id='get-a-specific-group'>Get a specific group</h2><h3 id='status-code-7'>STATUS CODE:</h3>
 <p>200 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h3 id='output-5'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nl">"group_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group 1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"group_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Awesome group"</span><span class="p">,</span><span class="w">
@@ -584,7 +584,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='http-request-8'>HTTP request</h3>
 <p><code>GET /api/groups/&lt;ID&gt;</code></p>
-<h2 id='request-to-join-group'>Request to join group</h2><h3 id='output-8'>OUTPUT:</h3>
+<h2 id='request-to-join-group'>Request to join group</h2><h3 id='status-code-8'>STATUS CODE:</h3>
 <p>201 OK</p>
 <h3 id='input-4'>INPUT:</h3>
 <p><code>
@@ -595,7 +595,7 @@
 </code></p>
 <h3 id='http-request-9'>HTTP request</h3>
 <p><code>POST /api/groups/&lt;request&gt;</code></p>
-<h2 id='admin-delete-user-from-group'>Admin delete user from group</h2><h3 id='output-9'>OUTPUT:</h3>
+<h2 id='admin-delete-user-from-group'>Admin delete user from group</h2><h3 id='status-code-9'>STATUS CODE:</h3>
 <p>204 OK</p>
 <h3 id='input-5'>INPUT:</h3>
 <p><code>
@@ -606,9 +606,9 @@
 </code></p>
 <h3 id='http-request-10'>HTTP request</h3>
 <p><code>DELETE /api/groups/remove</code></p>
-<h2 id='get-all-members-in-a-group'>Get all members in a group</h2><h3 id='output-10'>OUTPUT:</h3>
+<h2 id='get-all-members-in-a-group'>Get all members in a group</h2><h3 id='status-code-10'>STATUS CODE:</h3>
 <p>200 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h3 id='output-6'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"user_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fredrik"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Holtet"</span><span class="p">,</span><span class="w">
@@ -622,7 +622,7 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div><h3 id='http-request-11'>HTTP request</h3>
 <p><code>GET /api/groups</code></p>
-<h2 id='post-a-post-in-group'>Post a post in group</h2><h3 id='output-11'>OUTPUT:</h3>
+<h2 id='post-a-post-in-group'>Post a post in group</h2><h3 id='status-code-11'>STATUS CODE:</h3>
 <p>201 OK</p>
 <h3 id='input-6'>INPUT:</h3>
 <p><code>
@@ -634,9 +634,9 @@
 </code></p>
 <h3 id='http-request-12'>HTTP request</h3>
 <p><code>POST /api/groups/&lt;ID&gt;/posts</code></p>
-<h2 id='get-all-posts-in-a-group'>Get all posts in a  group</h2><h3 id='output-12'>OUTPUT:</h3>
+<h2 id='get-all-posts-in-a-group'>Get all posts in a  group</h2><h3 id='status-code-12'>STATUS CODE:</h3>
 <p>200 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h3 id='output-7'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"posts_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help"</span><span class="p">,</span><span class="w">
@@ -663,7 +663,7 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div><h3 id='http-request-13'>HTTP request</h3>
 <p><code>GET /api/groups/&lt;ID&gt;/posts</code></p>
-<h2 id='post-a-comment-on-a-post'>Post a comment on a post</h2><h3 id='output-13'>OUTPUT:</h3>
+<h2 id='post-a-comment-on-a-post'>Post a comment on a post</h2><h3 id='status-code-13'>STATUS CODE:</h3>
 <p>201 OK</p>
 <h3 id='input-7'>INPUT:</h3>
 <p><code>
@@ -675,9 +675,9 @@
 </code></p>
 <h3 id='http-request-14'>HTTP request</h3>
 <p><code>POST /api/groups/posts/&lt;ID&gt;/comment</code></p>
-<h2 id='get-all-comments'>Get all comments</h2><h3 id='output-14'>OUTPUT:</h3>
+<h2 id='get-all-comments'>Get all comments</h2><h3 id='status-code-14'>STATUS CODE:</h3>
 <p>200 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h3 id='output-8'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nl">"comment_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I can help"</span><span class="p">,</span><span class="w">
@@ -695,9 +695,9 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div><h3 id='http-request-15'>HTTP request</h3>
 <p><code>GET /api/groups/posts/&lt;ID&gt;/comments/all</code></p>
-<h2 id='get-all-your-groups'>Get all your groups</h2><h3 id='output-15'>OUTPUT:</h3>
+<h2 id='get-all-your-groups'>Get all your groups</h2><h3 id='status-code-15'>STATUS CODE:</h3>
 <p>200 OK</p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+<h3 id='output-9'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="nl">"user_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
