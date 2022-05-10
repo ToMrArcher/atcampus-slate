@@ -364,6 +364,18 @@
                   <li>
                     <a href="#post-a-post-in-group" class="toc-h2 toc-link" data-title="Post a post in group">Post a post in group</a>
                   </li>
+                  <li>
+                    <a href="#get-all-posts-in-a-group" class="toc-h2 toc-link" data-title="Get all posts in a  group">Get all posts in a  group</a>
+                  </li>
+                  <li>
+                    <a href="#post-a-comment-on-a-post" class="toc-h2 toc-link" data-title="Post a comment on a post">Post a comment on a post</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-comments" class="toc-h2 toc-link" data-title="Get all comments">Get all comments</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-your-groups" class="toc-h2 toc-link" data-title="Get all your groups">Get all your groups</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -576,12 +588,82 @@
 </span></code></pre></div><h3 id='http-request-11'>HTTP request</h3>
 <p><code>GET /api/groups</code></p>
 <h2 id='post-a-post-in-group'>Post a post in group</h2><h3 id='input-6'>INPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can someone help me with this problem"</span><span class="w">
+  </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the body of the post"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='http-request-12'>HTTP request</h3>
-<p><code>POST /api/groups/posts</code></p>
+<p><code>POST /api/groups/&lt;ID&gt;/posts</code></p>
+<h2 id='get-all-posts-in-a-group'>Get all posts in a  group</h2><h3 id='output-7'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"posts_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can someone help me with this problem"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_date_created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"posts_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help again"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can someone help me with this problem again"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_date_created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"posts_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I need help pls help"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Can someone help me with this problem IU NEED HELP"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-13'>HTTP request</h3>
+<p><code>GET /api/groups/&lt;ID&gt;/posts</code></p>
+<h2 id='post-a-comment-on-a-post'>Post a comment on a post</h2><h3 id='input-7'>INPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"comment_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I can help"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"post_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the body of the post"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-14'>HTTP request</h3>
+<p><code>POST /api/groups/posts/&lt;ID&gt;/comment</code></p>
+<h2 id='get-all-comments'>Get all comments</h2><h3 id='output-8'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I can help"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.03.1996"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_post_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I can also help"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.10.1996"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_post_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"comment_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-15'>HTTP request</h3>
+<p><code>GET /api/groups/posts/&lt;ID&gt;/comments/all</code></p>
+<h2 id='get-all-your-groups'>Get all your groups</h2><h3 id='output-9'>OUTPUT:</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"user_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"is_Favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.10.2021"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"is_Favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"date_joined"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.10.2021"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-16'>HTTP request</h3>
+<p><code>GET /api/user/&lt;ID&gt;/groups/all</code></p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
