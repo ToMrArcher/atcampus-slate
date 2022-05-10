@@ -22,7 +22,7 @@ meta:
 
 # Introduction
 
-Welcome to the API for AtCampus. Here you can access all of the information about users, groups, posts, comments, schools, and programs.  
+Welcome to the API for AtCampus. Here you can access all of the information about users, groups, posts, comments, schools, and programs.   
 
 We have language bindings in JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
