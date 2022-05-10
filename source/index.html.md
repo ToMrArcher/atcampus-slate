@@ -32,6 +32,7 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ## Get All Users
 
+### OUTPUT:
 ```json
 [
   {
@@ -206,5 +207,41 @@ ID | The ID of the user to delete
 
 ### HTTP request
 
-`GET /api/groups/<ID>>`
+`GET /api/groups/<ID>`
 
+## Request to join group
+
+```json
+{
+  "group_id": 1,
+  "group_description": "Awesome group"
+}
+```
+
+### HTTP request
+`POST /api/groups/<request>`
+
+## Admin delete user from group
+
+```json
+{
+  "group_id": 1,
+  "user_id": 2
+}
+```
+
+### HTTP request
+`DELETE /api/groups`
+
+## Get all members in a group
+
+```json
+{
+  "firstname": "Fredrik",
+  "lastname": "Holtet",
+  "profileImage": "https://flickr.com/sfavzxdsrgsfar4123f"
+}
+```
+
+### HTTP request
+`GET /api/groups`
