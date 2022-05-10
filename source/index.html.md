@@ -42,7 +42,8 @@ This example API documentation page was created with [Slate](https://github.com/
 `POST /api/groups/posts`
 
 
-### Register:
+## Register:
+### INPUT:
 ```json
 {
   "user_first_name": "Fredrik",
