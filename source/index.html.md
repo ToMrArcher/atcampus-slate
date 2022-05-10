@@ -135,7 +135,7 @@ This endpoint updates a specific user
 
 ### HTTP Request
 
-`POST /api/user/<ID>`
+`PUT /api/user/`
 
 ### URL Params
 
@@ -145,19 +145,19 @@ ID | The ID of the user to delete
 
 ### Body
 
-<code>
+```json
 {
-  "id": 2, <br>
-  "firstName": "Marco", <br>
-  "lastName": "Newname", <br>
-  "phoneNumber": "123456789", <br>
-  "email": "marco@newname.com",<br>
-  "school": 1,<br>
-  "program": 2,<br>
-  "profileImage": "https://flickr.com/sfa2zxdsaf123f",<br>
-  "dateCreated": "24.03.2000" <br>
+  "id": 2,
+  "firstName": "Marco",
+  "lastName": "Newname",
+  "phoneNumber": "123456789",
+  "email": "marco@newname.com",
+  "school": 1,
+  "program": 2,
+  "profileImage": "https://flickr.com/sfa2zxdsaf123f",
+  "dateCreated": "24.03.2000"
 }
-</code>
+```
 
 # Groups
 
@@ -166,7 +166,43 @@ ID | The ID of the user to delete
 
 `GET /api/groups/all`
 
+```json
+[
+  {
+    "group_id": 1,
+    "group_name": "Group 1",
+    "group_description": "Awesome group",
+    "group_image": "https://flickr.com/sfavzxdsrgsfar4123f",
+    "group_school": "Høyskolen Kristiania",
+    "group_admin": 1,
+    "dateCreated": "24.03.1996"
+  },
+  {
+    "group_id": 2,
+    "group_name": "Group 2",
+    "group_description": "Studygroup for programming",
+    "group_image": "https://flickr.com/sfavzxdsrgsfar4123f",
+    "group_school": "Høyskolen Kristiania",
+    "group_admin": 3,
+    "dateCreated": "24.03.1996"
+  }
+  
+]
+```
+
 ## Get a specific group
+
+```json
+{
+  "group_id": 1,
+  "group_name": "Group 1",
+  "group_description": "Awesome group",
+  "group_image": "https://flickr.com/sfavzxdsrgsfar4123f",
+  "group_school": "Høyskolen Kristiania",
+  "group_admin": 1,
+  "dateCreated": "24.03.1996"
+}
+```
 
 ### HTTP request
 
