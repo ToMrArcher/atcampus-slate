@@ -103,7 +103,7 @@ This example API documentation page was created with [Slate](https://github.com/
 This endpoint retrieves all users.
 
 ### HTTP Request
-`GET /api/user`
+`GET /api/user/all`
 
 
 ## Get a Specific User
@@ -194,7 +194,7 @@ This endpoint updates a specific user
 </code>
 
 ### HTTP Request
-`PUT /api/user`
+`PUT /api/user/update/<ID>`
 
 ### URL Params
 
