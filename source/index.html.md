@@ -108,7 +108,7 @@ This endpoint retrieves all users.
 
 ## Get a Specific User
 ### STATUS CODE:
-204 OK
+200 OK
 
 ### OUTPUT:
 
@@ -137,7 +137,7 @@ Parameter | Description
 ID | The ID of the user to retrieve
 
 
-## Delete a Specific Kitten
+## Delete a Specific User
 
 ```json
 {
@@ -236,7 +236,7 @@ ID | The ID of the user to delete
 ]
 ```
 ### HTTP Request
-`GET /api/groups/all`
+`GET /api/group/all`
 
 
 ## Get a specific group
@@ -257,39 +257,35 @@ ID | The ID of the user to delete
 }
 ```
 ### HTTP request
-`GET /api/groups/<ID>`
+`GET /api/group/<ID>`
 
 
 ## Request to join group
 ### STATUS CODE:
 201 OK
 
-### INPUT:
-<code>
-{<br>
-  "group_id": 1,<br>
-  "group_description": "Awesome group"<br>
-}
-</code>
+### Parameters
+Parameter | Description
+--------- | -----------
+userId | The ID of the user to add a request for
+groupId | The id of the group to add the user request to
 
 ### HTTP request
-`POST /api/groups/<request>`
+`POST /api/group/request/<userId>/<groupId>
 
 
 ## Admin delete user from group
 ### STATUS CODE:
 204 OK
 
-### INPUT:
-<code>
-{<br>
-  "group_id": 1,<br>
-  "user_id": 2<br>
-}
-</code>
+### Parameters
+Parameter | Description
+--------- | -----------
+userId | The ID of the user to add a request for
+groupId | The id of the group to add the user request to
 
 ### HTTP request
-`DELETE /api/groups/remove`
+`DELETE /api/group/remove/<userId>/groupId`
 
 
 ## Get all members in a group
@@ -313,7 +309,12 @@ ID | The ID of the user to delete
 ]
 ```
 ### HTTP request
-`GET /api/groups`
+`GET /api/group/<groupId>/users`
+
+### Parameters
+Parameter | Description
+--------- | -----------
+groupId | The ID of the group
 
 
 ## Post a post in group
@@ -330,10 +331,10 @@ ID | The ID of the user to delete
 </code>
 
 ### HTTP request
-`POST /api/groups/<ID>/posts`
+`POST /api/group/<ID>/post`
 
 
-## Get all posts in a  group
+## Get all posts in a group
 ### STATUS CODE:
 200 OK
 
@@ -367,7 +368,7 @@ ID | The ID of the user to delete
 ]
 ```
 ### HTTP request
-`GET /api/groups/<ID>/posts`
+`GET /api/group/<ID>/post`
 
 ## Post a comment on a post
 ### STATUS CODE:
@@ -383,9 +384,14 @@ ID | The ID of the user to delete
 </code>
 
 ### HTTP request
-`POST /api/groups/posts/<ID>/comment`
+`POST /api/post/<ID>/comment`
 
-## Get all comments
+### Parameters
+Parameter | Description
+--------- | -----------
+id | Id of the post to add the comment to 
+
+## Get all comments by post
 ### STATUS CODE:
 200 OK
 
@@ -410,9 +416,15 @@ ID | The ID of the user to delete
 ]
 ```
 ### HTTP request
-`GET /api/groups/posts/<ID>/comments/all`
+`GET /api/post/<ID>/comment/all`
 
-## Get all your groups
+### Parameters
+Parameter | Description
+--------- | -----------
+ID | The ID of the post
+
+
+## Get all groups of user
 ### STATUS CODE:
 200 OK
 
@@ -437,5 +449,10 @@ ID | The ID of the user to delete
 ]
 ```
 ### HTTP request
-`GET /api/user/<ID>/groups/all`
+`GET /api/user/<ID>/group/all`
+
+### Parameters
+Parameter | Description
+--------- | -----------
+ID | The ID of the user
 
