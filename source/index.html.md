@@ -451,7 +451,7 @@ ID | The ID of the post
 ### HTTP request
 `GET /api/user/<ID>/group/all`
 
-### Parameters
+## Parameters
 Parameter | Description
 --------- | -----------
 ID | The ID of the user
