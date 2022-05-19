@@ -271,7 +271,7 @@ userId | The ID of the user to add a request for
 groupId | The id of the group to add the user request to
 
 ### HTTP request
-`POST /api/group/request/<userId>/<groupId>
+POST /api/group/request/<userId>/<groupId>
 
 
 ## Admin delete user from group
